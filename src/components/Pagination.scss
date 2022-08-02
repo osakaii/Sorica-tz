@@ -1,0 +1,19 @@
+@import "../_vars.scss";
+
+.pagination{
+    display: flex;
+    gap: 12px;
+    margin-top: 46px;
+    .page{
+        background-color: $red;
+        padding: 4px 8px;
+        font-size: 22px;
+        border-radius: 4px;
+        border: 1px solid white;
+        cursor: pointer;
+        color: white;
+    }
+    .current{
+        background-color: red;
+    }
+}
