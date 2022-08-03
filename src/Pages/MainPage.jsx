@@ -26,8 +26,9 @@ function MainPage(props) {
         searchParams.value,
         searchParams.code
       );
-
+      console.log(fetchedOrders)
       if (fetchedOrders) {
+        console.log(123);
         setOrders(fetchedOrders.data.dataObjects);
         setTotalPages(
           Math.ceil(fetchedOrders.data.count / searchParams.pagesize)
@@ -66,7 +67,7 @@ function MainPage(props) {
             <tr>
               <th className="error-text">Server didnt response{'('}</th>
             </tr>
-          ) : isFetching ? (
+          ) : !isFetching ? (
             searchParams.pagesize !== 0 ? (
               orders.map((order, index) => (
                 <tr key={order.code}>
